@@ -1,8 +1,8 @@
 /* === Variables === */
 :root {
   /* Background color */
-  --bg-primary: #ec4899;
-  --bg-secondary: #e75ea3;
+  --bg-primary: #0ea5e9;
+  --bg-secondary: #26b5f7;
   --bg-white: #fff;
   --bg-black: #222;
   --bg-blue: #0ea5e9;
@@ -10,10 +10,10 @@
   --bg-slate: #e2e8f0;
   --bg-gray: #d1d5db;
 
-  --bg-primary-rgba-xs: rgba(236, 72, 153, 0.2);
-  --bg-primary-rgba-sm: rgba(236, 72, 153, 0.4);
-  --bg-primary-rgba-md: rgba(236, 72, 153, 0.6);
-  --bg-primary-rgba-lg: rgba(236, 72, 153, 0.8);
+  --bg-primary-rgba-xs: rgba(14, 165, 233, 0.2);
+  --bg-primary-rgba-sm: rgba(14, 165, 233, 0.4);
+  --bg-primary-rgba-md: rgba(14, 165, 233, 0.6);
+  --bg-primary-rgba-lg: rgba(14, 165, 233, 0.8);
 
   --bg-white-rgba-xs: rgba(225, 225, 225, 0.2);
   --bg-white-rgba-sm: rgba(225, 225, 225, 0.4);
@@ -132,14 +132,17 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   font-weight: var(--font-regular);
+
   &::-webkit-scrollbar {
     width: 8px;
     height: 8px;
   }
+
   &::-webkit-scrollbar-thumb {
     background: var(--bg-gray);
     border-radius: var(--rounded-xxl);
   }
+
   &::-webkit-scrollbar-track {
     background: var(--bg-slate);
   }
@@ -213,10 +216,18 @@ input[type="number"] {
   background: var(--bg-secondary);
 }
 
+/* Card */
+.card {
+  padding: var(--p-2);
+  border-radius: var(--rounded-lg);
+  background: var(--bg-white);
+  box-shadow: 0 0 10px var(--bg-black-rgba-xs);
+}
+
 /* === Header === */
 .header {
   height: var(--h-8);
-  padding: 0 calc(var(--p-5) * 6);
+  padding: 0 calc(var(--p-2));
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -233,7 +244,7 @@ input[type="number"] {
 .container {
   width: var(--w-full);
   height: calc(var(--h-full) - var(--h-8));
-  padding: var(--p-5) calc(var(--p-5) * 6);
+  padding: var(--p-5) calc(var(--p-2));
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -244,21 +255,106 @@ input[type="number"] {
 .sidebar {
   width: calc(var(--w-10) * 2);
   height: var(--h-full);
+}
+
+.sidebar-item {
+  width: var(--w-full);
+  padding: var(--p-1) var(--p-2);
+  margin-bottom: var(--m-1);
+  border-radius: var(--rounded-lg);
+  font-weight: var(--font-medium);
   background: var(--bg-white);
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  cursor: pointer;
+  transition: background-color var(--transition-time-md) var(--transition-fn),
+    color var(--transition-time-md) var(--transition-fn);
+}
+
+.sidebar-item:last-child {
+  margin-bottom: unset;
+}
+
+.sidebar-item > * {
+  transition: color var(--transition-time-md) var(--transition-fn);
+}
+
+.sidebar-item:hover {
+  background: var(--bg-primary);
+  color: var(--text-white);
+}
+
+.sidebar-item:hover > * {
+  color: var(--text-white);
+}
+
+.sidebar-item-active {
+  background: var(--bg-primary);
+  color: var(--text-white);
+}
+
+.sidebar-item-active > * {
+  color: var(--text-white);
 }
 
 /* === Content === */
 .content {
   width: calc(var(--w-10) * 10);
   height: var(--h-full);
-  border-radius: var(--rounded-lg);
-  background: var(--bg-white);
+  position: relative;
+}
+
+.content-item {
+  width: var(--w-full);
+  height: var(--h-full);
+  padding: var(--p-2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-time-xs) var(--transition-fn);
+}
+
+.content-item-active {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* === Avatar === */
 .avatar {
   width: calc(var(--w-10) * 6);
   height: var(--h-full);
-  border-radius: var(--rounded-lg);
-  background: var(--bg-white);
+  padding: 0;
+}
+
+.avatar-view {
+  width: var(--w-full);
+  height: calc(var(--h-full) - 30%);
+  background: linear-gradient(
+    to top,
+    var(--bg-primary-rgba-sm) 20%,
+    var(--bg-primary-rgba-xs) 90%
+  );
+}
+
+.avatar-content {
+  width: var(--w-full);
+  height: calc(var(--h-full) - 70%);
+  padding: var(--p-2);
+}
+
+.avatar-content p {
+  font-size: var(--text-xl);
+  text-align: center;
+}
+
+.avatar-content p:first-child {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-semibold);
+}
+
+.avatar-content p:last-child {
+  color: var(--text-gray);
 }

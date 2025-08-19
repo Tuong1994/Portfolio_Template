@@ -20,18 +20,51 @@
     <title>Portfofio Template</title>
   </head>
   <body>
-    <!-- Header -->
+    <!-- ==== Header === -->
     <header class="header">
       <div class="header-logo"></div>
       <button class="button">Download CV</button>
     </header>
 
     <main class="container">
-      <!-- Sidebar -->
-      <aside class="sidebar"></aside>
-      <!-- Content -->
-      <section class="content"></section>
-      <section class="avatar"></section>
+      <!-- === Sidebar === -->
+      <aside class="sidebar">
+        <a href="#about" class="sidebar-item sidebar-item-active">
+          <i class="fa-solid fa-file"></i>
+          <span>About me</span>
+        </a>
+        <a href="#experiences" class="sidebar-item">
+          <i class="fa-solid fa-person-walking-luggage"></i>
+          <span>Experiences</span>
+        </a>
+        <a href="#projects" class="sidebar-item">
+          <i class="fa-solid fa-code"></i>
+          <span>Projects</span>
+        </a>
+        <a href="#contact" class="sidebar-item">
+          <i class="fa-solid fa-link"></i>
+          <span>Contact</span>
+        </a>
+      </aside>
+      <!-- === Content === -->
+      <section class="card content">
+        <!-- About -->
+        <div id="about" class="content-item content-item-active about">About</div>
+        <!-- Experiences -->
+        <div id="experiences" class="content-item experiences">Experiences</div>
+        <!-- Projects -->
+        <div id="projects" class="content-item projects">Projects</div>
+        <!-- Contact -->
+        <div id="contact" class="content-item contact">Contact</div>
+      </section>
+      <!-- === Avatar === -->
+      <section class="card avatar">
+        <div class="avatar-view"></div>
+        <div class="avatar-content">
+          <p>Jack Anderson</p>
+          <p>Frontend Developer</p>
+        </div>
+      </section>
     </main>
 
     <script type="module" src="main.js"></script>
