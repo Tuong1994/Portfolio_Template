@@ -1,0 +1,229 @@
+/* === Variables === */
+:root {
+  /* Background color */
+  --bg-primary: #ec4899;
+  --bg-secondary: #e75ea3;
+  --bg-white: #fff;
+  --bg-black: #222;
+  --bg-blue: #0ea5e9;
+  --bg-pink: #ec4899;
+  --bg-slate: #e2e8f0;
+  --bg-gray: #d1d5db;
+
+  --bg-primary-rgba-xs: rgba(236, 72, 153, 0.2);
+  --bg-primary-rgba-sm: rgba(236, 72, 153, 0.4);
+  --bg-primary-rgba-md: rgba(236, 72, 153, 0.6);
+  --bg-primary-rgba-lg: rgba(236, 72, 153, 0.8);
+
+  --bg-white-rgba-xs: rgba(225, 225, 225, 0.2);
+  --bg-white-rgba-sm: rgba(225, 225, 225, 0.4);
+  --bg-white-rgba-md: rgba(225, 225, 225, 0.6);
+  --bg-white-rgba-lg: rgba(225, 225, 225, 0.8);
+
+  --bg-black-rgba-xs: rgba(0, 0, 0, 0.2);
+  --bg-black-rgba-sm: rgba(0, 0, 0, 0.4);
+  --bg-black-rgba-md: rgba(0, 0, 0, 0.6);
+  --bg-black-rgba-lg: rgba(0, 0, 0, 0.8);
+
+  --bg-blue-rgba-xs: rgba(14, 165, 233, 0.2);
+  --bg-blue-rgba-sm: rgba(14, 165, 233, 0.4);
+  --bg-blue-rgba-md: rgba(14, 165, 233, 0.6);
+  --bg-blue-rgba-lg: rgba(14, 165, 233, 0.8);
+
+  --bg-pink-rgba-xs: rgba(236, 72, 153, 0.2);
+  --bg-pink-rgba-sm: rgba(236, 72, 153, 0.4);
+  --bg-pink-rgba-md: rgba(236, 72, 153, 0.6);
+  --bg-pink-rgba-lg: rgba(236, 72, 153, 0.8);
+
+  /* Text color */
+  --text-black: #111;
+  --text-white: #fff;
+  --text-slate: #cbd5e1;
+  --text-gray: #9ca3af;
+  --text-blue: #0ea5e9;
+
+  /* Font size */
+  --text-xxs: 1.1rem;
+  --text-xs: 1.2rem;
+  --text-2xs: 1.3rem;
+  --text-sm: 1.4rem;
+  --text-md: 1.6rem;
+  --text-lg: 1.8rem;
+  --text-xl: 2rem;
+  --text-2xl: 2.2rem;
+  --text-3xl: 2.4rem;
+  --text-4xl: 2.6rem;
+  --text-xxl: 2.8rem;
+
+  /* Font weight */
+  --font-thin: 100;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Width */
+  --w-1: 1rem;
+  --w-2: 2rem;
+  --w-3: 3rem;
+  --w-4: 4rem;
+  --w-5: 5rem;
+  --w-6: 6rem;
+  --w-7: 7rem;
+  --w-8: 8rem;
+  --w-9: 9rem;
+  --w-10: 10rem;
+  --w-full: 100%;
+  --w-screen: 100vw;
+
+  /* Height */
+  --h-1: 1rem;
+  --h-2: 2rem;
+  --h-3: 3rem;
+  --h-4: 4rem;
+  --h-5: 5rem;
+  --h-6: 6rem;
+  --h-7: 7rem;
+  --h-8: 8rem;
+  --h-9: 9rem;
+  --h-10: 10rem;
+  --h-full: 100%;
+  --h-screen: 100vh;
+
+  /* Margin */
+  --m-1: 1rem;
+  --m-2: 2rem;
+  --m-3: 3rem;
+  --m-4: 4rem;
+  --m-5: 5rem;
+
+  /* Padding */
+  --p-1: 1rem;
+  --p-2: 2rem;
+  --p-3: 3rem;
+  --p-4: 4rem;
+  --p-5: 5rem;
+
+  /* Border radius */
+  --rounded: 0.4rem;
+  --rounded-md: 0.6rem;
+  --rounded-lg: 0.8rem;
+  --rounded-xxl: 5rem;
+  --rounded-full: 100%;
+
+  /* Transition duration */
+  --transition-time-xs: 0.2s;
+  --transition-time-sm: 0.4s;
+  --transition-time-md: 0.6s;
+  --transition-time-lg: 0.8s;
+  --transition-time-xl: 1s;
+
+  /* Transition type */
+  --transition-fn: ease;
+}
+
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: var(--text-md);
+  color: var(--text-black);
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: var(--font-regular);
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--bg-gray);
+    border-radius: var(--rounded-xxl);
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--bg-slate);
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: var(--w-full);
+  height: var(--h-screen);
+  background: linear-gradient(
+    to bottom,
+    var(--bg-primary-rgba-sm) 20%,
+    var(--bg-primary-rgba-xs) 90%
+  );
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* === Common === */
+/* Button */
+.button {
+  padding: calc(var(--p-1) - 0.4rem) var(--p-1);
+  border: unset;
+  border-radius: var(--rounded);
+  color: var(--text-white);
+  background: var(--bg-primary);
+  transition: box-shadow var(--transition-time-xs) var(--transition-fn),
+    background-color var(--transition-time-md) var(--transition-fn);
+}
+
+.button > * {
+  color: var(--text-white);
+}
+
+.button:active {
+  box-shadow: 0 0 0 3px var(--bg-primary-rgba-xs);
+}
+
+.button:hover {
+    background: var(--bg-secondary);
+}
+
+/* === Header === */
+.header {
+  padding: var(--p-1) calc(var(--p-5) * 6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  width: var(--w-5);
+  height: var(--h-5);
+  border-radius: var(--rounded);
+  background: var(--bg-slate);
+}
