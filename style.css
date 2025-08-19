@@ -215,7 +215,8 @@ input[type="number"] {
 
 /* === Header === */
 .header {
-  padding: var(--p-2) calc(var(--p-5) * 6);
+  height: var(--h-8);
+  padding: 0 calc(var(--p-5) * 6);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -231,9 +232,10 @@ input[type="number"] {
 /* === Container === */
 .container {
   width: var(--w-full);
-  height: var(--h-full);
-  padding: 0 calc(var(--p-5) * 6);
+  height: calc(var(--h-full) - var(--h-8));
+  padding: var(--p-5) calc(var(--p-5) * 6);
   display: flex;
+  align-items: center;
   justify-content: space-between;
   column-gap: 2rem;
 }
@@ -249,6 +251,7 @@ input[type="number"] {
 .content {
   width: calc(var(--w-10) * 10);
   height: var(--h-full);
+  border-radius: var(--rounded-lg);
   background: var(--bg-white);
 }
 
@@ -256,5 +259,6 @@ input[type="number"] {
 .avatar {
   width: calc(var(--w-10) * 6);
   height: var(--h-full);
+  border-radius: var(--rounded-lg);
   background: var(--bg-white);
 }
