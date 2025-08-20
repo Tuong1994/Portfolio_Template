@@ -23,32 +23,58 @@
     <!-- ==== Header === -->
     <header class="header">
       <div class="header-logo"></div>
-      <button class="button">Download CV</button>
+      <button class="button header-button">Download CV</button>
+      <div class="header-mobile-info">
+        <div class="info-name">Jack Anderson</div>
+        <div class="info-avatar"></div>
+      </div>
     </header>
 
     <main class="container">
       <!-- === Sidebar === -->
       <aside class="sidebar">
-        <a href="#about" class="sidebar-item sidebar-item-active">
-          <i class="fa-solid fa-file"></i>
-          <span>About me</span>
-        </a>
-        <a href="#skills" class="sidebar-item">
-          <i class="fa-solid fa-trophy"></i>
-          <span>Skills</span>
-        </a>
-        <a href="#experiences" class="sidebar-item">
-          <i class="fa-solid fa-person-walking-luggage"></i>
-          <span>Experiences</span>
-        </a>
-        <a href="#projects" class="sidebar-item">
-          <i class="fa-solid fa-code"></i>
-          <span>Projects</span>
-        </a>
-        <a href="#contact" class="sidebar-item">
-          <i class="fa-solid fa-link"></i>
-          <span>Contact</span>
-        </a>
+        <!-- Desktop -->
+        <div class="sidebar-desktop">
+          <a href="#about" class="sidebar-item sidebar-item-active">
+            <i class="fa-solid fa-file"></i>
+            <span>About me</span>
+          </a>
+          <a href="#skills" class="sidebar-item">
+            <i class="fa-solid fa-trophy"></i>
+            <span>Skills</span>
+          </a>
+          <a href="#experiences" class="sidebar-item">
+            <i class="fa-solid fa-person-walking-luggage"></i>
+            <span>Experiences</span>
+          </a>
+          <a href="#projects" class="sidebar-item">
+            <i class="fa-solid fa-code"></i>
+            <span>Projects</span>
+          </a>
+          <a href="#contact" class="sidebar-item">
+            <i class="fa-solid fa-link"></i>
+            <span>Contact</span>
+          </a>
+        </div>
+
+        <!-- Mobile -->
+        <div class="sidebar-mobile">
+          <a href="#about" class="sidebar-item sidebar-item-active">
+            <i class="fa-solid fa-file"></i>
+          </a>
+          <a href="#skills" class="sidebar-item">
+            <i class="fa-solid fa-trophy"></i>
+          </a>
+          <a href="#experiences" class="sidebar-item">
+            <i class="fa-solid fa-person-walking-luggage"></i>
+          </a>
+          <a href="#projects" class="sidebar-item">
+            <i class="fa-solid fa-code"></i>
+          </a>
+          <a href="#contact" class="sidebar-item">
+            <i class="fa-solid fa-link"></i>
+          </a>
+        </div>
       </aside>
 
       <!-- === Content === -->
@@ -183,30 +209,30 @@
         <div id="experiences" class="content-item experiences">
           <h1 class="title">Experiences</h1>
           <p class="subtitle">My career's journey</p>
-          <div class="card experiences-card">
-            <div class="card-head">
+          <div class="experiences-group">
+            <div class="group-head">
               <div class="head-job">
                 <p class="job-title">Frontend Developer</p>
                 <p class="job-company">Google</p>
               </div>
               <div class="head-year">2021 - 2025</div>
             </div>
-            <p class="card-body">
+            <p class="group-body">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
               minus temporibus et similique aliquam cum. Sit cum sunt sint
               dolorum dolor officiis voluptate ratione doloribus deserunt minus,
               nemo laudantium possimus?
             </p>
           </div>
-          <div class="card experiences-card">
-            <div class="card-head">
+          <div class="experiences-group">
+            <div class="group-head">
               <div class="head-job">
                 <p class="job-title">Backend Developer</p>
                 <p class="job-company">Facebook</p>
               </div>
               <div class="head-year">2021 - 2025</div>
             </div>
-            <p class="card-body">
+            <p class="group-body">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
               minus temporibus et similique aliquam cum. Sit cum sunt sint
               dolorum dolor officiis voluptate ratione doloribus deserunt minus,
@@ -303,7 +329,12 @@
           <form class="contact-form">
             <input type="text" placeholder="Name" class="form-input" />
             <input type="text" placeholder="Email" class="form-input" />
-            <textarea cols="30" rows="10" placeholder="Message" class="form-input"></textarea>
+            <textarea
+              cols="30"
+              rows="10"
+              placeholder="Message"
+              class="form-input"
+            ></textarea>
             <button class="button form-button">Send</button>
           </form>
         </div>
