@@ -252,10 +252,17 @@ input[type="number"] {
   margin-bottom: var(--m-3);
 }
 
+/* Image */
+.image {
+  width: var(--w-full);
+  height: var(--h-full);
+  object-fit: cover;
+}
+
 /* === Header === */
 .header {
   height: var(--h-8);
-  padding: 0 calc(var(--p-2));
+  padding: 0 calc(var(--p-5) * 6);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -265,7 +272,11 @@ input[type="number"] {
   width: var(--w-5);
   height: var(--h-5);
   border-radius: var(--rounded);
-  background: var(--bg-slate);
+  overflow: hidden;
+}
+
+.header-logo .logo-image {
+  object-fit: contain;
 }
 
 .header-mobile-info {
@@ -278,7 +289,12 @@ input[type="number"] {
   width: var(--w-5);
   height: var(--w-5);
   border-radius: var(--rounded-full);
-  background: var(--bg-slate);
+  background: linear-gradient(
+    to top,
+    var(--bg-primary-rgba-sm) 20%,
+    var(--bg-primary-rgba-xs) 90%
+  );
+  overflow: hidden;
 }
 
 .header-mobile-info .info-name {
@@ -289,7 +305,7 @@ input[type="number"] {
 .container {
   width: var(--w-full);
   height: calc(var(--h-full) - var(--h-8));
-  padding: var(--p-5) calc(var(--p-2));
+  padding: var(--p-5) calc(var(--p-5) * 6);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -389,6 +405,7 @@ input[type="number"] {
     var(--bg-primary-rgba-sm) 20%,
     var(--bg-primary-rgba-xs) 90%
   );
+  overflow: hidden;
 }
 
 .avatar-content {
@@ -760,6 +777,22 @@ input[type="number"] {
   padding: calc(var(--p-1) - 0.4rem) var(--p-3);
 }
 
+/* === Background Animation === */
+.squares {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.square {
+  position: absolute;
+  bottom: -60px; /* bắt đầu dưới màn hình */
+  background: var(--bg-blue);
+  opacity: 0.2;
+  animation: rise linear forwards infinite;
+}
+
 /* === Responsive === */
 @media screen and (max-width: 1200px) {
   /* Header */
@@ -887,5 +920,13 @@ input[type="number"] {
 
   .projects-list .list-wrapper .wrapper-item {
     width: var(--w-full);
+  }
+}
+
+/* === Animation keyframes === */
+@keyframes rise {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
   }
 }
