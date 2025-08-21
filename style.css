@@ -793,6 +793,47 @@ input[type="number"] {
   animation: rise linear forwards infinite;
 }
 
+/* === Mouse cursor === */
+.cursor {
+  height: var(--h-3);
+  width: var(--w-3);
+  border-radius: var(--rounded-full);
+  border: 2px solid var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transition: transform 0.1s linear,
+    border-color var(--transition-time-sm) var(--transition-fn),
+    background-color var(--transition-time-sm) var(--transition-fn),
+    width var(--transition-time-sm) var(--transition-fn),
+    height var(--transition-time-sm) var(--transition-fn);
+  z-index: 9999;
+  will-change: transform;
+}
+
+.cursor .cursor-dot {
+  width: calc(var(--w-1) - 0.5rem);
+  height: calc(var(--h-1) - 0.5rem);
+  opacity: 1;
+  background: var(--bg-primary);
+  border-radius: var(--rounded-full);
+  transition: opacity var(--transition-time-sm) var(--transition-fn),
+    background-color var(--transition-time-sm) var(--transition-fn);
+}
+
+.cursor-hover {
+  background: var(--bg-primary-rgba-sm);
+  border-color: transparent !important;
+}
+
+.cursor-hover .cursor-dot {
+  opacity: 0;
+}
+
 /* === Responsive === */
 @media screen and (max-width: 1200px) {
   /* Header */
