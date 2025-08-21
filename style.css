@@ -898,6 +898,11 @@ input[type="number"] {
     border-bottom-left-radius: unset;
     padding: var(--p-1);
   }
+
+  /* Mouse cursor */
+  .cursor {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 765px) {
