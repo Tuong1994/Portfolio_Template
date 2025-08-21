@@ -21,360 +21,378 @@
     <title>Jack Anderson</title>
   </head>
   <body>
-    <!-- ==== Header === -->
-    <header class="header">
-      <div class="header-logo">
-        <img class="image logo-image" src="/assets/logo.png" alt="logo" />
-      </div>
-      <button class="button header-button">Download CV</button>
-      <div class="header-mobile-info">
-        <div class="info-name">Jack Anderson</div>
-        <div class="info-avatar">
-          <img class="image" src="/assets/avatar.png" alt="avatar" />
+    <!-- === Loading overlay === -->
+    <div class="loading-overlay">
+      <div class="overlay-left">
+        <div class="left-dots">
+          <div class="dots-item"></div>
+          <div class="dots-item"></div>
         </div>
       </div>
-    </header>
-
-    <main class="container">
-      <!-- === Sidebar === -->
-      <aside class="sidebar">
-        <!-- Desktop -->
-        <div class="sidebar-desktop">
-          <a href="#about" class="sidebar-item sidebar-item-active">
-            <i class="fa-solid fa-file"></i>
-            <span>About me</span>
-          </a>
-          <a href="#skills" class="sidebar-item">
-            <i class="fa-solid fa-trophy"></i>
-            <span>Skills</span>
-          </a>
-          <a href="#experiences" class="sidebar-item">
-            <i class="fa-solid fa-person-walking-luggage"></i>
-            <span>Experiences</span>
-          </a>
-          <a href="#projects" class="sidebar-item">
-            <i class="fa-solid fa-code"></i>
-            <span>Projects</span>
-          </a>
-          <a href="#contact" class="sidebar-item">
-            <i class="fa-solid fa-link"></i>
-            <span>Contact</span>
-          </a>
+      <div class="overlay-right">
+        <div class="right-dots">
+          <div class="dots-item"></div>
+          <div class="dots-item"></div>
         </div>
+      </div>
+    </div>
 
-        <!-- Mobile -->
-        <div class="sidebar-mobile">
-          <a href="#about" class="sidebar-item sidebar-item-active">
-            <i class="fa-solid fa-file"></i>
-          </a>
-          <a href="#skills" class="sidebar-item">
-            <i class="fa-solid fa-trophy"></i>
-          </a>
-          <a href="#experiences" class="sidebar-item">
-            <i class="fa-solid fa-person-walking-luggage"></i>
-          </a>
-          <a href="#projects" class="sidebar-item">
-            <i class="fa-solid fa-code"></i>
-          </a>
-          <a href="#contact" class="sidebar-item">
-            <i class="fa-solid fa-link"></i>
-          </a>
+    <div id="app" style="display: none;">
+      <!-- ==== Header === -->
+      <header class="header">
+        <div class="header-logo">
+          <img class="image logo-image" src="/assets/logo.png" alt="logo" />
         </div>
-      </aside>
-
-      <!-- === Content === -->
-      <section class="card content">
-        <!-- About -->
-        <div id="about" class="content-item content-item-active about">
-          <h1 class="title">About</h1>
-          <p class="subtitle">Frontend Developer</p>
-          <p class="paragraph about-intro">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-            obcaecati nostrum totam est reiciendis, possimus minima illum, enim
-            quia molestias corrupti, consequatur non. Quo tenetur esse quam
-            repellendus deleniti laudantium, odio ad eius, sed ut consectetur
-            obcaecati quia nesciunt maiores quidem, autem beatae sapiente
-            praesentium iure quaerat expedita est? Numquam?
-          </p>
-          <button class="button about-button">Download CV</button>
-          <div class="card about-card">
-            <div class="card-group">
-              <p class="group-label">Name</p>
-              <div class="group-info">Your name</div>
-            </div>
-            <div class="card-group">
-              <p class="group-label">Birthday</p>
-              <div class="group-info">Your birthday</div>
-            </div>
-            <div class="card-group">
-              <p class="group-label">Phone</p>
-              <div class="group-info">Your phone</div>
-            </div>
-            <div class="card-group">
-              <p class="group-label">Address</p>
-              <div class="group-info">Your address</div>
-            </div>
+        <button class="button header-button">Download CV</button>
+        <div class="header-mobile-info">
+          <div class="info-name">Jack Anderson</div>
+          <div class="info-avatar">
+            <img class="image" src="/assets/avatar.png" alt="avatar" />
           </div>
         </div>
+      </header>
 
-        <!-- Skills -->
-        <div id="skills" class="content-item skills">
-          <h1 class="title">Skills</h1>
-          <p class="subtitle">Combination of Education & Skills</p>
-          <div class="skills-group">
-            <div class="group-title">
-              <i class="fa-regular fa-circle-dot"></i>
-              <span>Education</span>
-            </div>
-            <div class="group-subject">
-              <div class="subject-head">
-                <div class="head-label">
-                  <p>Frontend developer</p>
-                  <p>Codecademy</p>
-                </div>
-                <p class="head-year">2021 - 2025</p>
-              </div>
-              <p class="paragraph subject-content">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi
-                optio unde asperiores maiores aperiam accusamus saepe, odio
-                accusantium. Dolorum labore, placeat dolor molestias commodi ea
-                delectus minus laudantium beatae deserunt!
-              </p>
-            </div>
-            <div class="group-subject">
-              <div class="subject-head">
-                <div class="head-label">
-                  <p>Backend developer</p>
-                  <p>Codecademy</p>
-                </div>
-                <p class="head-year">2021 - 2025</p>
-              </div>
-              <p class="paragraph subject-content">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi
-                optio unde asperiores maiores aperiam accusamus saepe, odio
-                accusantium. Dolorum labore, placeat dolor molestias commodi ea
-                delectus minus laudantium beatae deserunt!
-              </p>
-            </div>
-            <div class="group-subject">
-              <div class="subject-head">
-                <div class="head-label">
-                  <p>Fullstack developer</p>
-                  <p>Codecademy</p>
-                </div>
-                <p class="head-year">2021 - 2025</p>
-              </div>
-              <p class="paragraph subject-content">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi
-                optio unde asperiores maiores aperiam accusamus saepe, odio
-                accusantium. Dolorum labore, placeat dolor molestias commodi ea
-                delectus minus laudantium beatae deserunt!
-              </p>
-            </div>
-          </div>
-          <div class="skills-group">
-            <div class="group-title">
-              <i class="fa-regular fa-circle-dot"></i>
+      <main class="container">
+        <!-- === Sidebar === -->
+        <aside class="sidebar">
+          <!-- Desktop -->
+          <div class="sidebar-desktop">
+            <a href="#about" class="sidebar-item sidebar-item-active">
+              <i class="fa-solid fa-file"></i>
+              <span>About me</span>
+            </a>
+            <a href="#skills" class="sidebar-item">
+              <i class="fa-solid fa-trophy"></i>
               <span>Skills</span>
-            </div>
-            <div class="group-programming">
-              <div class="programming-language">
-                <div class="language-percent" data-progress="90">
-                  <div class="percent-number">90%</div>
-                  <div class="percent-bar"></div>
-                </div>
-                <p class="language-name">HTML</p>
-              </div>
-              <div class="programming-language">
-                <div class="language-percent" data-progress="80">
-                  <div class="percent-number">80%</div>
-                  <div class="percent-bar"></div>
-                </div>
-                <p class="language-name">CSS</p>
-              </div>
-              <div class="programming-language">
-                <div class="language-percent" data-progress="75">
-                  <div class="percent-number">75%</div>
-                  <div class="percent-bar"></div>
-                </div>
-                <p class="language-name">Javascript</p>
-              </div>
-              <div class="programming-language">
-                <div class="language-percent" data-progress="75">
-                  <div class="percent-number">75%</div>
-                  <div class="percent-bar"></div>
-                </div>
-                <p class="language-name">ReactJs</p>
-              </div>
-            </div>
+            </a>
+            <a href="#experiences" class="sidebar-item">
+              <i class="fa-solid fa-person-walking-luggage"></i>
+              <span>Experiences</span>
+            </a>
+            <a href="#projects" class="sidebar-item">
+              <i class="fa-solid fa-code"></i>
+              <span>Projects</span>
+            </a>
+            <a href="#contact" class="sidebar-item">
+              <i class="fa-solid fa-link"></i>
+              <span>Contact</span>
+            </a>
           </div>
-        </div>
 
-        <!-- Experiences -->
-        <div id="experiences" class="content-item experiences">
-          <h1 class="title">Experiences</h1>
-          <p class="subtitle">My career's journey</p>
-          <div class="experiences-group">
-            <div class="group-head">
-              <div class="head-job">
-                <p class="job-title">Frontend Developer</p>
-                <p class="job-company">Google</p>
-              </div>
-              <div class="head-year">2021 - 2025</div>
-            </div>
-            <p class="group-body">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
-              minus temporibus et similique aliquam cum. Sit cum sunt sint
-              dolorum dolor officiis voluptate ratione doloribus deserunt minus,
-              nemo laudantium possimus?
+          <!-- Mobile -->
+          <div class="sidebar-mobile">
+            <a href="#about" class="sidebar-item sidebar-item-active">
+              <i class="fa-solid fa-file"></i>
+            </a>
+            <a href="#skills" class="sidebar-item">
+              <i class="fa-solid fa-trophy"></i>
+            </a>
+            <a href="#experiences" class="sidebar-item">
+              <i class="fa-solid fa-person-walking-luggage"></i>
+            </a>
+            <a href="#projects" class="sidebar-item">
+              <i class="fa-solid fa-code"></i>
+            </a>
+            <a href="#contact" class="sidebar-item">
+              <i class="fa-solid fa-link"></i>
+            </a>
+          </div>
+        </aside>
+
+        <!-- === Content === -->
+        <section class="card content">
+          <!-- About -->
+          <div id="about" class="content-item content-item-active about">
+            <h1 class="title">About</h1>
+            <p class="subtitle">Frontend Developer</p>
+            <p class="paragraph about-intro">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+              obcaecati nostrum totam est reiciendis, possimus minima illum,
+              enim quia molestias corrupti, consequatur non. Quo tenetur esse
+              quam repellendus deleniti laudantium, odio ad eius, sed ut
+              consectetur obcaecati quia nesciunt maiores quidem, autem beatae
+              sapiente praesentium iure quaerat expedita est? Numquam?
             </p>
-          </div>
-          <div class="experiences-group">
-            <div class="group-head">
-              <div class="head-job">
-                <p class="job-title">Backend Developer</p>
-                <p class="job-company">Facebook</p>
+            <button class="button about-button">Download CV</button>
+            <div class="card about-card">
+              <div class="card-group">
+                <p class="group-label">Name</p>
+                <div class="group-info">Your name</div>
               </div>
-              <div class="head-year">2021 - 2025</div>
-            </div>
-            <p class="group-body">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
-              minus temporibus et similique aliquam cum. Sit cum sunt sint
-              dolorum dolor officiis voluptate ratione doloribus deserunt minus,
-              nemo laudantium possimus?
-            </p>
-          </div>
-        </div>
-
-        <!-- Projects -->
-        <div id="projects" class="content-item projects">
-          <h1 class="title">Projects</h1>
-          <p class="subtitle">My projects that I've been worked</p>
-          <div class="projects-list">
-            <a href="#" target="_blank" class="list-wrapper">
-              <div class="wrapper-item">
-                <div class="item-image">
-                  <img src="/assets/web-app.svg" alt="project-image" />
-                </div>
-                <div class="item-info">
-                  <p class="info-name">Project name</p>
-                  <i class="fa-regular fa-eye"></i>
-                </div>
+              <div class="card-group">
+                <p class="group-label">Birthday</p>
+                <div class="group-info">Your birthday</div>
               </div>
-            </a>
-            <a href="#" target="_blank" class="list-wrapper">
-              <div class="wrapper-item">
-                <div class="item-image">
-                  <img src="/assets/web-app.svg" alt="project-image" />
-                </div>
-                <div class="item-info">
-                  <p class="info-name">Project name</p>
-                  <i class="fa-regular fa-eye"></i>
-                </div>
+              <div class="card-group">
+                <p class="group-label">Phone</p>
+                <div class="group-info">Your phone</div>
               </div>
-            </a>
-            <a href="#" target="_blank" class="list-wrapper">
-              <div class="wrapper-item">
-                <div class="item-image">
-                  <img src="/assets/web-app.svg" alt="project-image" />
-                </div>
-                <div class="item-info">
-                  <p class="info-name">Project name</p>
-                  <i class="fa-regular fa-eye"></i>
-                </div>
-              </div>
-            </a>
-            <a href="#" target="_blank" class="list-wrapper">
-              <div class="wrapper-item">
-                <div class="item-image">
-                  <img src="/assets/web-app.svg" alt="project-image" />
-                </div>
-                <div class="item-info">
-                  <p class="info-name">Project name</p>
-                  <i class="fa-regular fa-eye"></i>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <!-- Contact -->
-        <div id="contact" class="content-item contact">
-          <h1 class="title">Contact</h1>
-          <p class="subtitle">Contact me to get your projects done</p>
-          <div class="contact-info">
-            <div class="info-group">
-              <div class="group-icon">
-                <i class="fa-solid fa-envelope"></i>
-              </div>
-              <div class="group-content">
-                <span>Phone</span>
-                <span>Your phone</span>
-              </div>
-            </div>
-            <div class="info-group">
-              <div class="group-icon">
-                <i class="fa-solid fa-phone"></i>
-              </div>
-              <div class="group-content">
-                <span>Email</span>
-                <span>Your email</span>
-              </div>
-            </div>
-            <div class="info-group">
-              <div class="group-icon">
-                <i class="fa-solid fa-location-dot"></i>
-              </div>
-              <div class="group-content">
-                <span>Address</span>
-                <span>Your address</span>
+              <div class="card-group">
+                <p class="group-label">Address</p>
+                <div class="group-info">Your address</div>
               </div>
             </div>
           </div>
-          <form class="contact-form">
-            <input type="text" placeholder="Name" class="form-input" />
-            <input type="text" placeholder="Email" class="form-input" />
-            <textarea
-              cols="30"
-              rows="10"
-              placeholder="Message"
-              class="form-input"
-            ></textarea>
-            <button class="button form-button">Send</button>
-          </form>
-        </div>
-      </section>
 
-      <!-- === Avatar === -->
-      <section class="card avatar">
-        <div class="avatar-view">
-          <img class="image" src="/assets/avatar.png" alt="avatar" />
-        </div>
-        <div class="avatar-content">
-          <p>Jack Anderson</p>
-          <p>Frontend Developer</p>
-          <div class="content-socials">
-            <a href="#" target="_blank">
-              <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="#" target="_blank">
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <a href="#" target="_blank">
-              <i class="fa-brands fa-square-instagram"></i>
-            </a>
+          <!-- Skills -->
+          <div id="skills" class="content-item skills">
+            <h1 class="title">Skills</h1>
+            <p class="subtitle">Combination of Education & Skills</p>
+            <div class="skills-group">
+              <div class="group-title">
+                <i class="fa-regular fa-circle-dot"></i>
+                <span>Education</span>
+              </div>
+              <div class="group-subject">
+                <div class="subject-head">
+                  <div class="head-label">
+                    <p>Frontend developer</p>
+                    <p>Codecademy</p>
+                  </div>
+                  <p class="head-year">2021 - 2025</p>
+                </div>
+                <p class="paragraph subject-content">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi
+                  optio unde asperiores maiores aperiam accusamus saepe, odio
+                  accusantium. Dolorum labore, placeat dolor molestias commodi
+                  ea delectus minus laudantium beatae deserunt!
+                </p>
+              </div>
+              <div class="group-subject">
+                <div class="subject-head">
+                  <div class="head-label">
+                    <p>Backend developer</p>
+                    <p>Codecademy</p>
+                  </div>
+                  <p class="head-year">2021 - 2025</p>
+                </div>
+                <p class="paragraph subject-content">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi
+                  optio unde asperiores maiores aperiam accusamus saepe, odio
+                  accusantium. Dolorum labore, placeat dolor molestias commodi
+                  ea delectus minus laudantium beatae deserunt!
+                </p>
+              </div>
+              <div class="group-subject">
+                <div class="subject-head">
+                  <div class="head-label">
+                    <p>Fullstack developer</p>
+                    <p>Codecademy</p>
+                  </div>
+                  <p class="head-year">2021 - 2025</p>
+                </div>
+                <p class="paragraph subject-content">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi
+                  optio unde asperiores maiores aperiam accusamus saepe, odio
+                  accusantium. Dolorum labore, placeat dolor molestias commodi
+                  ea delectus minus laudantium beatae deserunt!
+                </p>
+              </div>
+            </div>
+            <div class="skills-group">
+              <div class="group-title">
+                <i class="fa-regular fa-circle-dot"></i>
+                <span>Skills</span>
+              </div>
+              <div class="group-programming">
+                <div class="programming-language">
+                  <div class="language-percent" data-progress="90">
+                    <div class="percent-number">90%</div>
+                    <div class="percent-bar"></div>
+                  </div>
+                  <p class="language-name">HTML</p>
+                </div>
+                <div class="programming-language">
+                  <div class="language-percent" data-progress="80">
+                    <div class="percent-number">80%</div>
+                    <div class="percent-bar"></div>
+                  </div>
+                  <p class="language-name">CSS</p>
+                </div>
+                <div class="programming-language">
+                  <div class="language-percent" data-progress="75">
+                    <div class="percent-number">75%</div>
+                    <div class="percent-bar"></div>
+                  </div>
+                  <p class="language-name">Javascript</p>
+                </div>
+                <div class="programming-language">
+                  <div class="language-percent" data-progress="75">
+                    <div class="percent-number">75%</div>
+                    <div class="percent-bar"></div>
+                  </div>
+                  <p class="language-name">ReactJs</p>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <!-- Experiences -->
+          <div id="experiences" class="content-item experiences">
+            <h1 class="title">Experiences</h1>
+            <p class="subtitle">My career's journey</p>
+            <div class="experiences-group">
+              <div class="group-head">
+                <div class="head-job">
+                  <p class="job-title">Frontend Developer</p>
+                  <p class="job-company">Google</p>
+                </div>
+                <div class="head-year">2021 - 2025</div>
+              </div>
+              <p class="group-body">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
+                minus temporibus et similique aliquam cum. Sit cum sunt sint
+                dolorum dolor officiis voluptate ratione doloribus deserunt
+                minus, nemo laudantium possimus?
+              </p>
+            </div>
+            <div class="experiences-group">
+              <div class="group-head">
+                <div class="head-job">
+                  <p class="job-title">Backend Developer</p>
+                  <p class="job-company">Facebook</p>
+                </div>
+                <div class="head-year">2021 - 2025</div>
+              </div>
+              <p class="group-body">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
+                minus temporibus et similique aliquam cum. Sit cum sunt sint
+                dolorum dolor officiis voluptate ratione doloribus deserunt
+                minus, nemo laudantium possimus?
+              </p>
+            </div>
+          </div>
+
+          <!-- Projects -->
+          <div id="projects" class="content-item projects">
+            <h1 class="title">Projects</h1>
+            <p class="subtitle">My projects that I've been worked</p>
+            <div class="projects-list">
+              <a href="#" target="_blank" class="list-wrapper">
+                <div class="wrapper-item">
+                  <div class="item-image">
+                    <img src="/assets/web-app.svg" alt="project-image" />
+                  </div>
+                  <div class="item-info">
+                    <p class="info-name">Project name</p>
+                    <i class="fa-regular fa-eye"></i>
+                  </div>
+                </div>
+              </a>
+              <a href="#" target="_blank" class="list-wrapper">
+                <div class="wrapper-item">
+                  <div class="item-image">
+                    <img src="/assets/web-app.svg" alt="project-image" />
+                  </div>
+                  <div class="item-info">
+                    <p class="info-name">Project name</p>
+                    <i class="fa-regular fa-eye"></i>
+                  </div>
+                </div>
+              </a>
+              <a href="#" target="_blank" class="list-wrapper">
+                <div class="wrapper-item">
+                  <div class="item-image">
+                    <img src="/assets/web-app.svg" alt="project-image" />
+                  </div>
+                  <div class="item-info">
+                    <p class="info-name">Project name</p>
+                    <i class="fa-regular fa-eye"></i>
+                  </div>
+                </div>
+              </a>
+              <a href="#" target="_blank" class="list-wrapper">
+                <div class="wrapper-item">
+                  <div class="item-image">
+                    <img src="/assets/web-app.svg" alt="project-image" />
+                  </div>
+                  <div class="item-info">
+                    <p class="info-name">Project name</p>
+                    <i class="fa-regular fa-eye"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div id="contact" class="content-item contact">
+            <h1 class="title">Contact</h1>
+            <p class="subtitle">Contact me to get your projects done</p>
+            <div class="contact-info">
+              <div class="info-group">
+                <div class="group-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="group-content">
+                  <span>Phone</span>
+                  <span>Your phone</span>
+                </div>
+              </div>
+              <div class="info-group">
+                <div class="group-icon">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="group-content">
+                  <span>Email</span>
+                  <span>Your email</span>
+                </div>
+              </div>
+              <div class="info-group">
+                <div class="group-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="group-content">
+                  <span>Address</span>
+                  <span>Your address</span>
+                </div>
+              </div>
+            </div>
+            <form class="contact-form">
+              <input type="text" placeholder="Name" class="form-input" />
+              <input type="text" placeholder="Email" class="form-input" />
+              <textarea
+                cols="30"
+                rows="10"
+                placeholder="Message"
+                class="form-input"
+              ></textarea>
+              <button class="button form-button">Send</button>
+            </form>
+          </div>
+        </section>
+
+        <!-- === Avatar === -->
+        <section class="card avatar">
+          <div class="avatar-view">
+            <img class="image" src="/assets/avatar.png" alt="avatar" />
+          </div>
+          <div class="avatar-content">
+            <p>Jack Anderson</p>
+            <p>Frontend Developer</p>
+            <div class="content-socials">
+              <a href="#" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a href="#" target="_blank">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a href="#" target="_blank">
+                <i class="fa-brands fa-square-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- === Background animation === -->
+        <div class="squares"></div>
+
+        <!-- === Mouse cursor === -->
+        <div class="cursor">
+          <div class="cursor-dot"></div>
         </div>
-      </section>
-
-      <!-- === Background animation === -->
-      <div class="squares"></div>
-
-      <!-- === Mouse cursor === -->
-      <div class="cursor">
-        <div class="cursor-dot"></div>
-      </div>
-    </main>
+      </main>
+    </div>
 
     <script type="module" src="main.js"></script>
   </body>
