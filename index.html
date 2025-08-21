@@ -22,7 +22,7 @@
   </head>
   <body>
     <!-- === Loading overlay === -->
-    <div class="loading-overlay">
+    <div class="loading-overlay" aria-hidden="true">
       <div class="overlay-left">
         <div class="left-dots">
           <div class="dots-item"></div>
@@ -43,7 +43,7 @@
         <div class="header-logo">
           <img class="image logo-image" src="/assets/logo.png" alt="logo" />
         </div>
-        <button class="button header-button">Download CV</button>
+        <button class="button header-button" aria-label="Download my CV">Download CV</button>
         <div class="header-mobile-info">
           <div class="info-name">Jack Anderson</div>
           <div class="info-avatar">
@@ -52,9 +52,9 @@
         </div>
       </header>
 
-      <main class="container">
+      <main class="container" role="main">
         <!-- === Sidebar === -->
-        <aside class="sidebar">
+        <aside class="sidebar" role="navigation" aria-label="Main menu">
           <!-- Desktop -->
           <div class="sidebar-desktop">
             <a href="#about" class="sidebar-item sidebar-item-active">
@@ -113,7 +113,7 @@
               consectetur obcaecati quia nesciunt maiores quidem, autem beatae
               sapiente praesentium iure quaerat expedita est? Numquam?
             </p>
-            <button class="button about-button">Download CV</button>
+            <button class="button about-button" aria-label="Download my CV">Download CV</button>
             <div class="card about-card">
               <div class="card-group">
                 <p class="group-label">Name</p>
@@ -349,15 +349,30 @@
               </div>
             </div>
             <form class="contact-form">
-              <input type="text" placeholder="Name" class="form-input" />
-              <input type="text" placeholder="Email" class="form-input" />
+              <input
+                type="text"
+                placeholder="Name"
+                class="form-input"
+                aria-label="Your name"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                class="form-input"
+                aria
+                label="Your email"
+                required
+              />
               <textarea
+                required
                 cols="30"
                 rows="10"
                 placeholder="Message"
                 class="form-input"
+                aria-label="Your message"
               ></textarea>
-              <button class="button form-button">Send</button>
+              <button class="button form-button" type="submit">Send</button>
             </form>
           </div>
         </section>
@@ -371,13 +386,25 @@
             <p>Jack Anderson</p>
             <p>Frontend Developer</p>
             <div class="content-socials">
-              <a href="#" target="_blank">
+              <a
+                href="#"
+                target="_blank"
+                aria-label="Visit Your Name's Facebook profile"
+              >
                 <i class="fa-brands fa-facebook"></i>
               </a>
-              <a href="#" target="_blank">
+              <a
+                href="#"
+                target="_blank"
+                aria-label="Visit Your Name's X-Twitter profile"
+              >
                 <i class="fa-brands fa-x-twitter"></i>
               </a>
-              <a href="#" target="_blank">
+              <a
+                href="#"
+                target="_blank"
+                aria-label="Visit Your Name's Instagram profile"
+              >
                 <i class="fa-brands fa-square-instagram"></i>
               </a>
             </div>
