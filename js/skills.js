@@ -1,5 +1,6 @@
 export const skillProgress = () => {
   const programLanuages = document.querySelectorAll(".language-percent");
+  
   programLanuages.forEach((programLanguage) => {
     const percent = programLanguage.dataset.progress ?? 100;
     const progressBarEl = programLanguage.lastElementChild;

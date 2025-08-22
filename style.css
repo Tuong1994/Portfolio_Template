@@ -6,6 +6,7 @@
   --bg-white: #fff;
   --bg-black: #222;
   --bg-blue: #0ea5e9;
+  --bg-red: #f43f5e;
   --bg-pink: #ec4899;
   --bg-slate: #e2e8f0;
   --bg-gray: #d1d5db;
@@ -42,6 +43,7 @@
   --text-slate: #cbd5e1;
   --text-gray: #9ca3af;
   --text-blue: #0ea5e9;
+  --text-red: #f43f5e;
 
   /* Font size */
   --text-xxs: 1.1rem;
@@ -221,6 +223,10 @@ input[type="number"] {
 
 .button:hover {
   background: var(--bg-secondary);
+}
+
+.button:disabled {
+  background: var(--bg-slate);
 }
 
 /* Card */
@@ -760,17 +766,30 @@ input[type="number"] {
   font-size: var(--text-2xl);
 }
 
-.contact-form .form-input {
-  width: var(--w-full);
-  padding: calc(var(--p-1) - 0.2rem) var(--p-1);
-  margin-bottom: var(--m-2);
-  border: 1px solid var(--bg-gray);
-  border-radius: var(--rounded-lg);
-  transition: box-shadow var(--transition-time-sm) var(--transition-fn);
+.contact-form .form-group {
+  margin-bottom: calc(var(--m-1) * 1.5);
 }
 
-.form-input:focus {
+.form-group .group-input {
+  width: var(--w-full);
+  padding: calc(var(--p-1) - 0.2rem) var(--p-1);
+  border: 1px solid var(--bg-gray);
+  border-radius: var(--rounded-lg);
+  transition: box-shadow var(--transition-time-sm) var(--transition-fn), border-color var(--transition-time-sm) var(--transition-fn);
+}
+
+.form-group-error .group-input {
+  border-color: var(--bg-red);
+}
+
+.group-input:focus {
   box-shadow: 0 0 0 3px var(--bg-primary-rgba-sm);
+}
+
+.contact-form .form-group .group-error-message {
+  font-size: var(--text-sm);
+  margin-top: 0.5rem;
+  color: var(--text-red);
 }
 
 .contact-form .form-button {
