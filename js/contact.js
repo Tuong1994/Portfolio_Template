@@ -4,7 +4,6 @@ const email = document.getElementById("email");
 const message = document.getElementById("message");
 const formButton = document.querySelector(".form-button");
 
-// Hiển thị input hợp lệ
 const isValidate = (input) => {
   const formControl = input.parentElement;
   formButton.disabled = false;
@@ -14,7 +13,6 @@ const isValidate = (input) => {
   return true;
 };
 
-// Hiển thị input không hợp lệ
 const isNotValidate = (input, message) => {
   const formControl = input.parentElement;
   formButton.disabled = true;
@@ -36,24 +34,31 @@ const checkEmail = (input) => {
   return isValidate(input);
 };
 
-// Validate required chung
+// Validate required
 const checkRequired = (input) => {
   if (input.value.trim() === "")
     return isNotValidate(input, "This field is required");
   return isValidate(input);
 };
 
-// Helper: gắn validation realtime
+// Helper: attach validation realtime
 const attachValidation = (input, validatorFn) => {
   input.addEventListener("input", () => validatorFn(input));
 };
 
-// Gắn realtime validate
+// attach realtime validate
 attachValidation(name, checkRequired);
 attachValidation(email, checkEmail);
 attachValidation(message, checkRequired);
 
-// Validate khi submit
+// Reset form
+const formReset = () => {
+  name.value = "";
+  email.value = "";
+  message.value = "";
+};
+
+// Validate when submit
 export const formSubmit = () => {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -69,6 +74,7 @@ export const formSubmit = () => {
         message: message.value,
       };
       console.log("submit", formData);
+      formReset()
     } else {
       console.log("form is not valid");
     }
